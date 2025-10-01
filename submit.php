@@ -1,17 +1,20 @@
 <?php
 
+echo '<nav>
+  <a href="index.html">Pievienot atsauksmi</a> | 
+  <a href="list.php">Skatīt atsauksmes</a>
+</nav><hr>';
 $servername = "localhost";
 $username = "book_review_user_011102025";
 $password = "password";
 $database = "book_review_01102025";
 
 $conn = mysqli_connect($servername, $username, $password, $database);
-
-
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
+
 
 $firstName = $_POST['username'];
 $lastName = $_POST['surname'];
@@ -25,7 +28,6 @@ $fullName = $firstName . ' ' . $lastName;
 $stmt = $conn->prepare("INSERT INTO book_review (full_name, book_title, review_text, rating) VALUES (?, ?, ?, ?)");
 
 $stmt->bind_param("sssi", $fullName, $bookTitle, $reviewText, $rating);
-
 
 $stmt->close();
 $conn->close();
@@ -45,9 +47,7 @@ $conn->close();
 
 <body>
     <p><?php echo ($_POST['username']); ?></p>
-    <p> dati veiksmīgi nosūtītu serverim</p>
-    <a href="index">back to start</a>
-    <a href="list">list</a>
+    <p> jus dati veiksmīgi nosūtītu serverim</p>
 </body>
 
 </html>
