@@ -47,6 +47,7 @@ $conn->close();
     <p><?php echo ($_POST['username']); ?></p>
     <p> dati veiksmīgi nosūtītu serverim</p>
     <a href="index">back to start</a>
+    <a href="list">list</a>
 </body>
 
 </html>
