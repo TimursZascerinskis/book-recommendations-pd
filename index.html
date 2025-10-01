@@ -5,5 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grāmatu vērtēšana</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Grāmatu vērtēšana</h1>
+    <form>
+      <div>
+        <label for="username">Vārds:</label><br />
+        <input type="text" id="username" name="username" /><br />
+        <br />
+      </div>
+
+      <div>
+        <label for="surname">Uzvārds:</label><br />
+        <input type="text" id="surname" name="surname" /><br />
+        <br />
+      </div>
+
+      <div>
+        <label for="cars">Choose a car:</label>
+
+        <select name="cars" id="cars">
+          <option value="1">Nelasāma</option>
+          <option value="2">Slikta</option>
+          <option value="3">Viduvēja</option>
+          <option value="4">Laba</option>
+          <option value="5">Lieliska</option>
+        </select>
+        <br /><br />
+      </div>
+
+      <div>
+        <label for="title">Nosaukums :</label><br />
+        <input type="text" id="title" name="title" /><br />
+        <br />
+      </div>
+      <div>
+        <label for="apraksts">Apraksts:</label>
+        <br />
+        <textarea id="apraksts" name="apraksts"></textarea>
+      </div>
+    </form>
+  </body>
 </html>
