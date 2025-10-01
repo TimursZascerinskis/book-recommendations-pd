@@ -10,7 +10,7 @@
 <body>
     <p><?php echo ($_POST['username']); ?></p>
     <p> dati veiksmīgi nosūtītu serverim</p>
-    <a href="index">back</a>
+    <a href="index">back to start</a>
 </body>
 
 </html>
